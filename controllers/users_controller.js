@@ -68,14 +68,13 @@ module.exports.createSession = function(req, res){
         if(err){console.log('error in finding user in signing in'); return}
         // handle user found
         if (user){
-            const match = await bcrypt.compare(req.body.password, user.password);
+            
             // handle password which doesn't match
-            if (match==false){
+            if (req.body.password!=user.password){
                 return res.redirect('back');
             }
-
             // handle session creation
-            await res.cookie('user_id', user.id);
+            res.cookie('user_id', user.id);
             return res.redirect('/users/profile');
 
         }else{
