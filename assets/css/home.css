@@ -1,0 +1,22 @@
+#feed-posts{
+    
+    width:70%;
+    padding: 10px;
+    
+}
+#posts-list-container{
+    border: 1px dotted black;
+    background-color: aqua;
+    height: 70%;
+    width: 70%;
+    padding: 10px;
+}
+#user-friends{
+    
+    width: 20%;
+    
+    
+    position: absolute;
+    right: -90px;
+    top: 15%;
+}
